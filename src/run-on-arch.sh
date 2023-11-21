@@ -50,7 +50,7 @@ build_container () {
     docker build \
       "${ACTION_DIR}/Dockerfiles" \
       --file "$DOCKERFILE" \
-      --tag "${CONTAINER_NAME}:latest"\
+      --tag "${CONTAINER_NAME}:latest" \
       --build-arg BUILDKIT_INLINE_CACHE=1
   else
     # Build optimization that uses GitHub package registry to cache docker
